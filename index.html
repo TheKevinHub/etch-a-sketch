@@ -11,17 +11,25 @@
 <body>
 
     <div class="header">
-        <button class="btn-reset">SHAKE IT CLEAN</button>
+        <button class="btn-reset" onclick="resetBoard()">SHAKE IT CLEAN</button>
+    </div>
+
+    <div class="instructions">
+        <div class="drawingSwitch">
+            <div class="draw">Drawing is OFF</div>
+            <div class="drawInstructions">Click to switch ON/OFF</div>
+        </div>
+        <div class="currentGridSize">Current grid size: 16x16</div>
     </div>
 
     <div class="containerGrid"></div>
 
     <div class="footer">
-        <div class="modes">Etch Modes</div>
+        <div class="modes">Sketch Modes</div>
         <div class="mode-btns">
-            <button class="mode">Black & White</button>
-            <button class="mode">Rainbow</button>
-            <button class="mode">Shading</button>
+            <button id="black" class="mode" onclick="setColor('black')">Black</button>
+            <button id="rainbow" class="mode" onclick="setColor('random')">Rainbow</button>
+            <button id="shading" class="mode" onclick="setColor('shading')">Shading</button>
         </div>
     </div>
 </body>

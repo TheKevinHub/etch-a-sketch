@@ -13,7 +13,6 @@ body {
     background-color: rgb(18, 18, 44);
     justify-content: center;
     align-items: center;
-    border: 3px solid yellow;
 }
 @font-face {
     font-family: "Roboto";
@@ -27,8 +26,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    margin: 15px 0px 30px 0px;
-    border: 3px solid yellow;
+    margin: 15px 0px 15px 0px;
 }
 .btn-reset {
     font-family: "Poxel";
@@ -44,12 +42,30 @@ body {
     cursor: pointer;
 }
 
+.instructions {
+    font-family: "Roboto";
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 15px;
+    width: 500px;
+    justify-content: space-around;
+    color: white;
+}
+.drawingSwitch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.currentGridSize {
+    display: flex;
+    align-items: center;
+}
 
 .containerGrid {
     display: grid;
     width: 500px;
     height: 500px;
-    border: 3px solid yellow;
+    background-color: white;
 }
 .wrapper {
     background-color: white;
@@ -64,9 +80,9 @@ body {
 }
 
 
-.footer {
-    border: 2px solid yellow;
-}
+/* .footer {
+
+} */
 .modes {
     font-family: "Roboto";
     font-size: 30px;
@@ -74,12 +90,12 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    margin: 15px 0px 30px 0px;
+    margin: 30px 0px 15px 0px;
 }
 .mode-btns {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
 }
 .mode {
@@ -89,7 +105,20 @@ body {
     border-radius: 4px;
     padding: 8px 20px;
 }
-.mode:hover {
-    background-color: rgb(187, 187, 187);
+#black {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+#rainbow {
+    background: linear-gradient(to left, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #7F00FF) right;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+    cursor: pointer;
+}
+#shading {
+    background: linear-gradient(to top, black, white) bottom;
+    color: white;
     cursor: pointer;
 }
